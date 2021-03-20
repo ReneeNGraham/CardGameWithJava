@@ -23,10 +23,15 @@ public class Card {
     public int getRank() {
         return rank.getRank();
     }
+
+    public void flipCard() {
+        this.isFaceUp = true;
+    }
     public String toString() {
         String str  = "";
         if (isFaceUp) {
-        str += rank.getRank() + " of " + suit.printSuit();
+        str += rank.printRank() + " of " + suit.printSuit();
+
         }
         else {
             str = "Face Down (nothing to see here)";
@@ -35,6 +40,5 @@ public class Card {
 
     }
 
-    public void flipCard() {
-    }
+
 }
