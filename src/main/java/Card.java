@@ -24,6 +24,11 @@ public class Card {
         return rank.getRank();
     }
 
+    public String printRank() {
+        //get rank as a string primarily for Aces - accessor methods - allows us to access of particular card
+        return rank.printRank();
+    }
+
     public void flipCard() {
         this.isFaceUp = true;
     }
