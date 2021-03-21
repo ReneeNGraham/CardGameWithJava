@@ -11,7 +11,7 @@ public enum Suit {
     private final String suitText;
    //Constructor and this and be created in my IDEA by using "option" and  "enter"
 
-    private Suit(String suitText) {
+     Suit(String suitText) {
         this.suitText = suitText;
     }
 

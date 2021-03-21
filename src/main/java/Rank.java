@@ -20,7 +20,7 @@ public enum Rank {
 
     /* Construct */
 
-    private Rank(int rankValue, String rankString) {
+    Rank(int rankValue, String rankString) {
 
         this.rankValue = rankValue;
         this.rankString = rankString;

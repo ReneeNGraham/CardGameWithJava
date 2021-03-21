@@ -17,6 +17,7 @@ public class Card {
     // Public Methods
 
     public String getSuit() {
+
         return suit.printSuit();
     }
 

@@ -58,6 +58,7 @@ public class Deck extends Hand {
 //void because it does not return a value - the flipCard method
 
     public void flipCard(Card card) {
+
         card.flipCard();
     }
 

@@ -7,6 +7,7 @@ public class Hand {
     //constructor
 
     public Hand() {
+
         cards = new ArrayList<Card>();
     }
     public void clear() {
@@ -14,6 +15,7 @@ public class Hand {
     }
 
     public void add(Card card) {
+
         cards.add(card);
     }
 
