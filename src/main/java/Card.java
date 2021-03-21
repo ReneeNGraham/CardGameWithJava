@@ -5,7 +5,7 @@ public class Card {
 
     private Suit suit;
     private Rank rank;
-    private boolean isFaceUp;
+    public boolean isFaceUp;
 
     //Constructor Method
     public Card(Rank rank, Suit suit) {

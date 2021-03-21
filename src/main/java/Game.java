@@ -30,16 +30,34 @@ public class Game {
 
         Deck deck1 = new Deck();
         deck1.populate();
-        System.out.println("Deck has following cards:"  + deck1.showHand());
+//        System.out.println("Deck has following cards:"  + deck1.showHand());
         deck1.shuffle();
-        System.out.println("Deck now has following card:" + deck1.showHand());
+//        System.out.println("Deck now has following card:" + deck1.showHand());
 
         //Create our playing hands
+        Hand hand1, hand2, hand3, dealer;
+        hand1 = new Hand();
+        hand2 = new Hand();
+        hand3 = new Hand();
+        dealer = new Hand();
+        Hand[] hands = {hand1, hand2, hand3};
+
         // deal cards to our hands
+        deck1.deal(hands, 2);
+
         //Deal 2 cards to dealer
+        deck1.deal(dealer, 2);
         //Show the player's hands
+        for (int i = 0; i < hands.length ; i++) {
+            hands[i].flipCard();
+            System.out.println(hands[i].showHand());
+        }
         //flip the dealer's card first
+        dealer.cards.get(0).flipCard();
+
         //show the dealer's cards
+        System.out.println("\nDealer's Cards: \n" +
+                     dealer.showHand());
 
     }
 }

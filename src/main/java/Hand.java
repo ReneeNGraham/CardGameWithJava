@@ -18,11 +18,27 @@ public class Hand {
     }
 
     public String showHand() {
+        /* Show cards and their total points, but
+        * only show total points if ALL cards arte face up*/
         String str = "";
-        for (Card c: cards) {
-            str += c.toString() + "\n";
+        boolean allFaceUp = true;
+        for (Card card: cards) {
+            str += card.toString() + "\n";
+            if(!card.isFaceUp) {
+                allFaceUp = false;
+            }
+        }
+        //if we are all faceup show the total
+        if(allFaceUp) {
+            str += "Total points =" + getTotal() + "\n";
         }
         return str;
+    }
+
+    public void flipCard() {
+        for (Card card: cards){
+            card.flipCard();
+        }
     }
 
     public boolean giveCard(Card card, Hand otherHand) {
